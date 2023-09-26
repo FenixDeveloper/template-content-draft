@@ -1,0 +1,628 @@
+@use "normalize";
+@use "variables" as *;
+@use "mixins" as mixin;
+
+/* Файл шрифтов: https://code.s3.yandex.net/web-code/fonts/fonts.css */
+@import url(https://code.s3.yandex.net/web-code/fonts/fonts.css);
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+}
+
+/* Типографика  */
+
+h1 {
+    font-size: 45px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 31px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.accent {
+    background-color: $black;
+    color: $white;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: $fuchsia;
+}
+
+ul {
+    list-style-type: square;
+}
+
+/* Фоны и цвета */
+
+.black {
+    @include mixin.color($black);
+}
+
+.grey {
+    @include mixin.color($grey);
+}
+
+.dotted {
+    background-image: $dotted;
+}
+
+.dotted-light {
+    background-image: $sparseDotted;
+}
+
+.white {
+    @include mixin.color($white);
+}
+
+.pink {
+    @include mixin.color($pink);
+}
+
+.fuchsia {
+    @include mixin.color($fuchsia);
+}
+
+.yellow {
+    @include mixin.color($yellow);
+}
+
+.green {
+    @include mixin.color($green);
+}
+
+.blue {
+    @include mixin.color($blue);
+}
+
+.violet {
+    @include mixin.color($violet);
+}
+
+/* Картинки */
+
+.userpic {
+    width: 80px;
+    height: 80px;
+    border: 1px solid $black;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+figure img {
+    border: 1px solid $black;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+/* Формы */
+
+button {
+    border: 1px solid $black;
+    padding: 10px 65px;
+    background-color: $yellow;  /* любой цвет или transparent */
+    color: $black;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+button:hover {
+    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 15%);
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 2px solid $black;
+    outline-offset: 0;
+}
+
+button[disabled] {
+    opacity: 0.6;
+}
+
+/* инпуты */
+
+label {
+    display: block;
+}
+
+label span {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+input[type=text] {
+    border: 1px solid $black;
+    padding: 10px 15px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input[type=text]::placeholder {
+    color: rgb(0 0 0 / 60%);
+}
+
+input[type=text]:focus {
+    outline: 2px solid $black;
+    outline-offset: 0;
+}
+
+input[type=text]:invalid {
+    background-color: $fuchsia;
+}
+
+input[type=text]:invalid::placeholder {
+    color: $black;
+}
+
+input[type=text]:disabled {
+    border-color: rgb(0 0 0 / 60%);
+    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 15%);
+}
+
+/* радио */
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+input[type=radio] {
+    width: 27px;
+    height: 27px;
+    accent-color: $black;
+}
+
+input[type=radio]:focus {
+    outline: 2px solid $black;
+    outline-offset: 0;
+}
+
+/* чекбоксы */
+label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    width: 27px;
+    height: 27px;
+    accent-color: $black;
+}
+
+input[type=checkbox]:focus {
+    outline: 2px solid $black;
+    outline-offset: 0;
+}
+
+/* рэндж */
+
+label {
+    display: block;
+}
+
+label span {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+input[type=range] {
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: 2px solid $black;
+    outline-offset: 2px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background-color: $black;
+    border-radius: 0;
+    border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    border: 1px solid $black;
+    height: 16px;
+    width: 26px;
+    border-radius: 0;
+    background-color: $white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3px;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background-color: $black;
+    border-radius: 0;
+    border: none;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-sizing: border-box;
+    border: 1px solid $black;
+    height: 16px;
+    width: 26px;
+    border-radius: 0;
+    background: $white;
+    cursor: pointer;
+}
+
+input[type=range]:disabled::-webkit-slider-runnable-track {
+    opacity: 0.6;
+}
+
+input[type=range]:disabled::-moz-range-track {
+    background-color: rgb(0 0 0 / 60%);
+}
+
+input[type=range]:disabled::-moz-range-thumb {
+    border-color: rgb(0 0 0 / 60%);
+}
+
+/* форма в сборе */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid $black;
+    padding: 45px;
+    background-color: $green;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip-path: inset(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+/* табы */
+
+.tab {
+    border: 1px solid $black;
+    padding: 10px 15px;
+    background-color: $yellow;
+    color: $black;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.tab_active {
+    background-color: $white;
+}
+
+/* отступы */
+
+form {
+    padding: 45px;
+    gap: 20px;
+}
+
+input[type=text] {
+    padding: 10px 15px;
+}
+
+button {
+    padding: 10px 65px;
+}
+
+div.big {
+    padding: 50px;
+}
+
+div.small {
+    padding: 25px;
+}
+
+/* попапы */
+/* инлайн */
+
+span {
+    position: relative;
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    cursor: pointer;
+}
+
+span::before {
+    content: "Всплывашка";
+    position: absolute;
+    display: none;
+    left: 50%;
+    bottom: 100%;
+    border: 1px solid $black;
+    padding: 10px;
+    background-color: $yellow;
+    transform: translateX(-50%);
+}
+
+span::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    display: none;
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid $black;
+    border-bottom: 1px solid $black;
+    background-color: $yellow;
+    transform: translate(-50%, 50%) rotate(45deg);
+}
+
+span:hover::before,
+span:hover::after,
+span:focus-visible::before,
+span:focus-visible::after {
+    display: block;
+}
+
+/* окно */
+section {
+    position: relative;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1px solid #000;
+    padding: 40px 20px 20px;
+    background-color: $yellow;
+    transform: translate(-50%);
+}
+
+.popup::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $black;
+}
+
+.popup button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    border: none;
+    margin-left: auto;
+    background-color: transparent;
+    background-image: $iconXButton;
+    background-size: 15px;
+    cursor: pointer;
+}
+
+.popup button:focus {
+    outline: 2px solid $black;
+    outline-offset: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip-path: inset(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+/* таблицы */
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid $black;
+    padding: 10px 30px;
+    background-color: $yellow;
+}
+
+th, td:first-of-type {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+thead tr th, tr:nth-of-type(2n) td {
+    background-color: $green;
+}
+
+th:first-of-type {
+    border-top-width: 0;
+    border-left-width: 0;
+    background-color: unset;
+}
+
+/* списки */
+div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 35px;
+    padding: 25px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 26px;
+    list-style-type: none;
+}
+
+li {
+    position: relative;
+    line-height: 1;
+}
+
+li + li::before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    left: -15px;
+    width: 6px;
+    height: 6px;
+    background-color: $black;
+}
+
+/* ссылки */
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: $fuchsia;
+}
+
+/* кнопки */
+
+button {
+    width: 17px;
+    height: 17px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+button.open {
+    background-image: $iconBurgerOpen
+}
+
+button.close {
+    background-image: $iconBurgerClose;
+}
+
+button:focus {
+    outline: 2px solid $black;
+    outline-offset: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip-path: inset(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+/* переключатель */
+.toggle {
+    min-width: 125px;
+    border: 1px solid $black;
+    padding: 5px 20px;
+    color: $black;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.toggle:hover {
+    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 15%);
+    cursor: pointer;
+}
+
+.toggle:focus {
+    outline: 2px solid $black;
+    outline-offset: 0;
+}
+
+.light .toggle {
+    background-color: $white;
+}
+
+.dark .toggle {
+    background-color: $blue;
+}
+
+.toggle_active {
+    background-color: $yellow;
+    font-weight: 800;
+}
+

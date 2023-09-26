@@ -1,0 +1,6 @@
+@mixin color($value) {
+  background-color: $value;
+  &-text {
+    color: $value;
+  }
+}
