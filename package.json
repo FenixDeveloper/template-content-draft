@@ -27,5 +27,10 @@
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
     "start": "webpack serve"
-  }
+  },
+  "main": "dist/main.css",
+  "files": [
+    "dist",
+    "package.json"
+  ]
 }

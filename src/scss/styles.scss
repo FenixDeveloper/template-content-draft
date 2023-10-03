@@ -304,6 +304,14 @@ form {
 
 /* табы */
 
+.tabs {
+  display: flex;
+
+  &_vertical {
+    flex-direction: column;
+  }
+}
+
 .tab {
   border: 1px solid $black;
   padding: 10px 15px;
@@ -311,11 +319,12 @@ form {
   color: $black;
   font-weight: 800;
   text-transform: uppercase;
+
+  &_active {
+    background-color: $white;
+  }
 }
 
-.tab_active {
-  background-color: $white;
-}
 
 /* отступы */
 
