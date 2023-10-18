@@ -582,11 +582,11 @@ figcaption {
 }
 
 /* окно */
-section {
+.overlay {
   position: relative;
 }
 
-section::before {
+.overlay::before {
   content: "";
   position: absolute;
   left: 0;
