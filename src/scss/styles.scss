@@ -164,7 +164,7 @@ label span {
   text-transform: uppercase;
 }
 
-input[type=text], input[type=number], input[type=date], input[type=datetime-local], input[type=email], input[type=url], input[type=color], input[type=password], textarea, .input {
+input[type=text], input[type=number], input[type=date], input[type=datetime-local], input[type=email], input[type=url], input[type=color], input[type=password], textarea, select, .input {
   border: 1px solid $black;
   padding: 10px 15px;
   background-color: transparent;

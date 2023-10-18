@@ -122,52 +122,53 @@
 		<div class="example border">
 			<form class="pink">
 				<h2>Заголовок формы</h2>
+
 				<label>
-					<span>поле с плейсхолдером</span>
-					<input type="text" placeholder="Плейсхолдер" />
+					<span>Строка</span>
+					<input type="text" name="string" placeholder="Плейсхолдер" />
 				</label>
 
 				<label>
 					<span>Число</span>
-					<input type="number" placeholder="Плейсхолдер" />
+					<input type="number" name="number" placeholder="Плейсхолдер" />
 				</label>
 
 				<label>
 					<span>Дата</span>
-					<input type="date" placeholder="Плейсхолдер" />
+					<input type="date" name="date" placeholder="Плейсхолдер" />
 				</label>
 
 				<label>
 					<span>Дата и время</span>
-					<input type="datetime-local" placeholder="Плейсхолдер" />
+					<input type="datetime-local" name="datetime" placeholder="Плейсхолдер" />
 				</label>
 
 				<fieldset class="row">
-					<legend>Строка инпутов</legend>
+					<legend>Объект</legend>
 					<label>
 						<span>Email</span>
-						<input type="email" placeholder="Плейсхолдер" />
+						<input type="email" name="profile[email]" placeholder="Плейсхолдер" />
 					</label>
 					<label>
 						<span>Пароль</span>
-						<input type="password" placeholder="Плейсхолдер" />
+						<input type="password" name="profile[password]" placeholder="Плейсхолдер" />
 					</label>
 				</fieldset>
 
 				<label>
 					<span>URL</span>
-					<input type="url" placeholder="Плейсхолдер" />
+					<input type="url" name="url" placeholder="Плейсхолдер" />
 				</label>
 
 				<label>
 					<span>Цвет</span>
-					<input type="color" placeholder="Плейсхолдер" />
+					<input type="color" name="color" placeholder="Плейсхолдер" />
 				</label>
 
 				<label>
 					<span>Файл</span>
 					<div>
-						<input type="file" />
+						<input type="file" name="file" />
 						<button type="button" class="yellow">Выберите файл</button>
 						<span class="input"></span>
 					</div>
@@ -175,37 +176,51 @@
 
 				<label>
 					<span>Текст</span>
-					<textarea></textarea>
+					<textarea name="text"></textarea>
+				</label>
+
+				<fieldset>
+					<legend>Множественный выбор</legend>
+					<label>
+						<input type="checkbox" name="settings.one" />
+						<span>чекбокс</span>
+					</label>
+
+					<label>
+						<input type="checkbox" name="settings.two" checked />
+						<span>чекбокс</span>
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Единственный выбор</legend>
+					<label>
+						<input type="radio" name="radio" />
+						<span>радио</span>
+					</label>
+
+					<label>
+						<input type="radio" name="radio" checked />
+						<span>радио</span>
+					</label>
+				</fieldset>
+
+				<label>
+					<span>Единственный выбор (селект)</span>
+					<select>
+						<option value="1">Опция 1</option>
+						<option value="1">Опция 2</option>
+						<option value="1">Опция 3</option>
+					</select>
 				</label>
 
 				<label>
-					<span>поле с плейсхолдером</span>
-					<input type="text" disabled placeholder="Плейсхолдер" />
-				</label>
-
-				<label>
-					<span>обязательное поле</span>
-					<input type="text" placeholder="Плейсхолдер" required />
-				</label>
-
-				<label>
-					<input type="checkbox" />
-					<span>чекбокс</span>
-				</label>
-
-				<label>
-					<input type="checkbox" checked />
-					<span>чекбокс</span>
-				</label>
-
-				<label>
-					<input type="radio" />
-					<span>радио</span>
-				</label>
-
-				<label>
-					<input type="radio" checked />
-					<span>радио</span>
+					<span>Множественный выбор (селект)</span>
+					<select multiple>
+						<option value="1">Опция 1</option>
+						<option value="1">Опция 2</option>
+						<option value="1">Опция 3</option>
+					</select>
 				</label>
 
 				<label>
