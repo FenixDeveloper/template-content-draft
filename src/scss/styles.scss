@@ -276,17 +276,32 @@ input[type=checkbox]:focus {
 
 label {
   display: block;
-}
 
-label span {
-  display: block;
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
+  span:first-child {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
 
-label:has(input[required]) span::after {
-  content: "*";
+  &:has(input[required]) span:first-child::after {
+    content: "*";
+  }
+
+  span.error {
+    display: none;
+  }
+
+  &:has(input:invalid) span.error {
+    display: block;
+    padding: 5px 15px;
+    font-weight: 500;
+    text-transform: none;
+
+    &::before {
+      content: "Ошибка: ";
+    }
+  }
 }
 
 input[type=range] {

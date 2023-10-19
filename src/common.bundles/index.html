@@ -129,28 +129,19 @@
 				</label>
 
 				<label>
-					<span>Число</span>
-					<input type="number" name="number" placeholder="Плейсхолдер" />
+					<span>Заблокированный инпут</span>
+					<input type="text" disabled placeholder="Плейсхолдер" />
 				</label>
 
 				<label>
-					<span>Дата</span>
-					<input type="date" name="date" placeholder="Плейсхолдер" />
+					<span>Требуемый инпут</span>
+					<input type="text" required placeholder="Плейсхолдер" />
 				</label>
 
 				<label>
-					<span>Месяц</span>
-					<input type="month" name="date" placeholder="Плейсхолдер" />
-				</label>
-
-				<label>
-					<span>Время</span>
-					<input type="time" name="date" placeholder="Плейсхолдер" />
-				</label>
-
-				<label>
-					<span>Дата и время</span>
-					<input type="datetime-local" name="datetime" placeholder="Плейсхолдер" />
+					<span>Инпут с ошибкой</span>
+					<input type="text" required placeholder="Плейсхолдер" />
+					<span class="error">text</span>
 				</label>
 
 				<fieldset class="row">
@@ -173,6 +164,60 @@
 					<span>URL</span>
 					<input type="url" name="url" placeholder="Плейсхолдер" />
 				</label>
+
+				<fieldset>
+					<legend>Числа</legend>
+				<label>
+					<span>Число</span>
+					<input type="number" name="number" placeholder="Плейсхолдер" />
+				</label>
+
+				<label>
+					<span>Дробное число</span>
+					<input type="number" name="number" placeholder="Плейсхолдер" step="0.1" />
+				</label>
+
+				<label>
+					<span>это range</span>
+					<input type="range" />
+				</label>
+
+				<label>
+					<span>Choose progress:</span>
+					<input type="range" name="percent" list="values" min="0" max="100" step="25" />
+
+					<datalist id="values">
+						<option value="0" label="0%"></option>
+						<option value="25" label="25%"></option>
+						<option value="50" label="50%"></option>
+						<option value="75" label="75%"></option>
+						<option value="100" label="100%"></option>
+					</datalist>
+				</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Даты</legend>
+				<label>
+					<span>Дата</span>
+					<input type="date" name="date" placeholder="Плейсхолдер" />
+				</label>
+
+				<label>
+					<span>Месяц</span>
+					<input type="month" name="date" placeholder="Плейсхолдер" />
+				</label>
+
+				<label>
+					<span>Время</span>
+					<input type="time" name="date" placeholder="Плейсхолдер" />
+				</label>
+
+				<label>
+					<span>Дата и время</span>
+					<input type="datetime-local" name="datetime" placeholder="Плейсхолдер" />
+				</label>
+				</fieldset>
 
 				<label>
 					<span>Цвет</span>
@@ -249,25 +294,16 @@
 					</select>
 				</label>
 
-				<label>
-					<span>это range</span>
-					<input type="range" />
-				</label>
+				<fieldset>
+					<legend>Массив</legend>
+					<label>
+						<span>Строки</span>
+						<input type="text" name="array[0]" placeholder="Элемент" />
+					</label>
+					<button type="button" class="yellow">Добавить</button>
+				</fieldset>
 
-				<label>
-					<span>Choose progress:</span>
-					<input type="range" name="percent" list="values" min="0" max="100" step="25" />
-
-					<datalist id="values">
-						<option value="0" label="0%"></option>
-						<option value="25" label="25%"></option>
-						<option value="50" label="50%"></option>
-						<option value="75" label="75%"></option>
-						<option value="100" label="100%"></option>
-					</datalist>
-				</label>
-
-				<button type="submit">отправить</button>
+				<button type="submit" class="black white-text">отправить</button>
 			</form>
 		</div>
 	</article>
