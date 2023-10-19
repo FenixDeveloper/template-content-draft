@@ -139,6 +139,16 @@
 				</label>
 
 				<label>
+					<span>Месяц</span>
+					<input type="month" name="date" placeholder="Плейсхолдер" />
+				</label>
+
+				<label>
+					<span>Время</span>
+					<input type="time" name="date" placeholder="Плейсхолдер" />
+				</label>
+
+				<label>
 					<span>Дата и время</span>
 					<input type="datetime-local" name="datetime" placeholder="Плейсхолдер" />
 				</label>
@@ -148,6 +158,10 @@
 					<label>
 						<span>Email</span>
 						<input type="email" name="profile[email]" placeholder="Плейсхолдер" />
+					</label>
+					<label>
+						<span>Телефон</span>
+						<input type="tel" name="profile[phone]" placeholder="Плейсхолдер" />
 					</label>
 					<label>
 						<span>Пароль</span>
@@ -163,6 +177,18 @@
 				<label>
 					<span>Цвет</span>
 					<input type="color" name="color" placeholder="Плейсхолдер" />
+				</label>
+
+				<label>
+					<span>Цвет</span>
+					<input type="color" name="color" placeholder="Плейсхолдер" list="colors" />
+					<datalist id="colors">
+						<option value="#000000"></option>
+						<option value="#FF0000"></option>
+						<option value="#00FF00"></option>
+						<option value="#0000FF"></option>
+						<option value="#FFFFFF"></option>
+					</datalist>
 				</label>
 
 				<label>
@@ -226,6 +252,19 @@
 				<label>
 					<span>это range</span>
 					<input type="range" />
+				</label>
+
+				<label>
+					<span>Choose progress:</span>
+					<input type="range" name="percent" list="values" min="0" max="100" step="25" />
+
+					<datalist id="values">
+						<option value="0" label="0%"></option>
+						<option value="25" label="25%"></option>
+						<option value="50" label="50%"></option>
+						<option value="75" label="75%"></option>
+						<option value="100" label="100%"></option>
+					</datalist>
 				</label>
 
 				<button type="submit">отправить</button>

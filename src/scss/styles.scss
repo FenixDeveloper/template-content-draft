@@ -164,7 +164,7 @@ label span {
   text-transform: uppercase;
 }
 
-input[type=text], input[type=number], input[type=date], input[type=datetime-local], input[type=email], input[type=url], input[type=color], input[type=password], textarea, select, .input {
+input[type=text], input[type=number], input[type=date], input[type=month], input[type=time], input[type=datetime-local], input[type=email], input[type=tel], input[type=url], input[type=color], input[type=password], textarea, select, .input {
   border: 1px solid $black;
   padding: 10px 15px;
   background-color: transparent;
@@ -292,6 +292,31 @@ label:has(input[required]) span::after {
 input[type=range] {
   width: 100%;
   -webkit-appearance: none;
+}
+
+label:has(input[type=range]):has(input[list]) {
+  position: relative;
+
+  datalist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    writing-mode: vertical-lr;
+    width: 100%;
+  }
+
+  option {
+    padding: 0;
+    &::before {
+      content: "- ";
+    }
+  }
+
+  input[type="range"] {
+    background-color: transparent;
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 input[type=range]:focus {
